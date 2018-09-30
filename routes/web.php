@@ -25,16 +25,10 @@ $router->group([
     $router->get('', 'cas_categoria_3Controller@index');  
 });
 
-
-
-
-
-
-
-
-// $router->get('/', function () use ($router) {
-//     return $router->app->version();
-// });
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+    // return 'Api do Luciano huhuhuhhuhuuh';
+});
 
 // $router->get('foo', function () {
 //     return 'Hello World';

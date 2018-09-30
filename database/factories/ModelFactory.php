@@ -19,7 +19,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(App\cas_chamados::class, function ($faker) {
+$factory->define(App\cas_chamados::class, function (Faker\Generator $faker) {
     return [
         'id_chamado' => $faker->id_chamado,
         'n_chamado' => $faker->n_chamado,
@@ -30,7 +30,7 @@ $factory->define(App\cas_chamados::class, function ($faker) {
 });
 
 
-$factory->define(App\cas_categoria_3::class, function ($faker) {
+$factory->define(App\cas_categoria_3::class, function (Faker\Generator $faker) {
     return [
         'id_categoria_3' => $faker->id_categoria_3,
         'categoria_3' => $faker->categoria_3
