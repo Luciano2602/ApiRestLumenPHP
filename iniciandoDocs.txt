@@ -1,0 +1,46 @@
+para autualizar o composer
+composer selfupdate
+
+instalando o frame lumen nessa instalacao ele pega a versao mais recente
+composer create-project --prefer-dist laravel/lumen ws-php
+
+aqui ele pega a versao que passamos pelo parametro, no caso ele vai instalar o 5.2
+composer create-project --prefer-dist laravel/lumen ws-php 5.2
+
+configurando, na pasta vc digita 
+copy .env.example .env
+
+apos isso precisamos editar o arquivo .env, v? na pasta
+e edite o APP_KEY= adicionando 32 digitos
+
+depois disso, salvar e verificar no endere?o
+http://localhost/webservice-php/ws-php/public/
+tem que aparecer a vers?o do lumen
+
+===========================================================
+
+
+na pasta database->factories mapear as classes no ModelFactory.php 
+
+ex: 
+
+$factory->define(App\cas_chamados::class, function ($faker) {
+    return [
+        'id_chamado' => $faker->id_chamado,
+        'n_chamado' => $faker->n_chamado,
+        'id_categoria_3' => $faker->id_categoria_3,
+        'id_categoria_4' => $faker->id_categoria_4,
+        'outros' => $faker->outros
+    ];
+});
+
+
+$factory->define(App\cas_categoria_3::class, function ($faker) {
+    return [
+        'id_categoria_3' => $faker->id_categoria_3,
+        'categoria_3' => $faker->categoria_3
+    ];
+});
+
+depois ir na pasta bootstrep, e descomentar a linha
+$app->withEloquent();
