@@ -44,3 +44,9 @@ $factory->define(App\cas_categoria_3::class, function ($faker) {
 
 depois ir na pasta bootstrep, e descomentar a linha
 $app->withEloquent();
+
+======================================================
+
+rodando o servidor (tem que estar na pasta)
+
+php -S localhost:8000 -t public public/index.php
